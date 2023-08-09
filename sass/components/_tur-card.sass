@@ -1,0 +1,91 @@
+.card-tur
+    height: 50rem
+    position: relative
+    perspective: 150rem
+    -moz-perspective: 150rem
+  
+   
+    &__slide
+        height: 50rem
+        transition: all 1s ease-out
+        box-shadow: $box-shadow
+        position: absolute
+        width: 100%
+        backface-visibility: hidden 
+        border-radius: $border-radius
+        overflow: hidden
+
+
+        &_back
+            background: linear-gradient(135deg, $color-Brown-light, $color-Brown-dark ) 
+            transform: rotateY(-180deg)
+            
+    &:hover &__slide_front
+        transform: rotateY(180deg)
+    &:hover &__slide_back
+        transform: rotateY(0deg)
+    &__img
+        background-blend-mode: hard-light
+        height: 22rem
+        background:$color-Brown-light  url(../img/group-tur.png) center / cover no-repeat
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 74%)
+        &_1
+            background:$color-Brown-light  url(../img/group-tur.png) center / cover no-repeat
+        &_2
+            background:$color-Brown-light  url(../img/ch-tur.png) center / cover no-repeat
+        &_3
+            background:$color-Brown-light  url(../img/smotr.png) center / cover no-repeat
+    &__title
+        font-size: 2.8rem
+        letter-spacing: .2rem
+        font-weight: 300
+        text-transform: uppercase
+        text-align: right
+        color: $color-white
+        position: absolute
+        top: 17rem
+        right: 0
+    &__span
+        background: linear-gradient(90deg, $color-Brown-light 3.65%, $color-Brown-dark 100%) 
+        padding: 1rem 2rem .3rem 2rem
+     
+            
+        &_2
+            position: absolute
+            top: 3.4rem
+            right: 0
+            padding-bottom: 1rem
+            padding-top: 0 
+    &__desk
+        ul
+            list-style: none
+            margin: 0 auto
+            width: 75%  
+            text-align: center
+            li 
+                font-size: $font-size-text
+                letter-spacing: .2rem
+                color: $color-gray
+                border-bottom: 1px solid $color-gray
+                display: inline-block
+              
+                &:not(:last-child)
+                    margin-bottom: 2rem
+    &__backBox
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+    &__text
+        margin-bottom: 8rem 
+        letter-spacing: .2rem
+        text-transform: uppercase
+        text-align: center
+        &_1
+            font-size:$font-size-text
+           
+            font-weight: 300
+            
+        &_2  
+            font-size: 6rem      
+            font-weight: 500        
